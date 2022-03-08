@@ -1,0 +1,49 @@
+﻿In the Name of Allah, the Most Gracious, Most Merciful.
+--------------------------------------------------------
+ NazmusLabs QuickType GO! Text Editor
+   Version: 0.1.22.309 (Pre-Alpha)
+   Patch Version :   012.22.308a05E
+
+ © 2022 NazmusLabs. Some Rights Reserved.
+
+                           ~~~
+
+
+ 📢 What's New in QuickType GO! 0.x
+   ▶ Building the foundations of QuickType GO!
+   ▶ TBD (Insha'Allah)
+   ▶ 
+
+ 📜 Full Patch Notes
+ ---------------------
+ Patch 012.22.308a05E
+   ▶ This release continues building the foundations.
+   ▶ [ADDED] the ability to enable/disable word wrap
+   ▶ [ADDED] the ability to set editor font
+   ▶ [UPDATED] default font property of the text editor Is changed to "Cascadia Code SemiLight, 12pt, style=Italic"
+   ▶ [UPDATED] documentation content with in-line comments throughout to explain what most of the code does, Alhamdullillah.
+   ▶ [REMOVED] Patch notes for all previous versions from the main code file. They are now located seperately in this file.
+   ▶ v0.1.22.309 (Pre Alpha)
+
+ Patch 011.22.308a04D
+   ▶ Building the foundations of QuickType
+   ▶ Application now compiles in x64 by default. Application development will, Insha'Allah, primarily focus on targetting 64-Bit platforms, with consideration for builds of 32-bit binaries as second priority.
+   ▶ App publisher And version information added to the binary.
+   ▶ [UPDATED] default font property of the text editor Is changed to "Cascadia Code SemiLight, 12pt, style=Italic"
+   ▶ [ADDED] documentation content, including version information And this patch notes.
+   ▶ v0.1.22.308 (Pre Alpha)
+
+ Patch 010.22.308a03C
+   ▶ Building the foundations of QuickType
+   ▶ [REMOVED] dark mode introduced in previous patch. Although it's implimentation worked & looked well (Alhamdullillah), work on this is set aside for the time being, and the feature may return at a future build, Insha'Allah.
+   ▶ v0.1.22.307 (Pre Alpha)
+
+ Patch 010.22.306a02B
+   ▶ Building the foundations of QuickType
+   ▶ [ADDED] experimental dark mode to the menu bar, menus, text field, And status bar. The title bar did Not receive this change.
+   ▶ v0.1.22.306 (Pre Alpha)
+
+ Patch N/A
+   ▶ This Is the working version of "NazmusLabs QuickType GO!"
+   ▶ Building the foundations of QuickType
+   ▶ v0.1.22.305 (First Build)

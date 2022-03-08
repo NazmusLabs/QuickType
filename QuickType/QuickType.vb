@@ -2,8 +2,8 @@
 'In the Name of Allah, the Most Gracious, Most Merciful.
 '--------------------------------------------------------
 ' NazmusLabs QuickType GO! Text Editor
-'   Version: 0.1.22.308 Pre-Alpha
-'   Patch Version: 011.22.308a04D
+'   Version: 0.1.22.309 (Pre-Alpha)
+'   Patch Version: 012.22.308a05E
 
 ' © 2022 NazmusLabs. Some Rights Reserved.
 
@@ -17,49 +17,74 @@
 
 ' 📜 Patch Notes
 ' -----------------
-' Patch 011.22.308a04D
-'   ▶ Building the foundations of QuickType
-'   ▶ Application now compiles in x64 by default. Application development will, Insha'Allah, primarily focus on targetting 64-Bit platforms, with consideration for builds of 32-bit binaries as second priority.
-'   ▶ TBD (Insha'Allah)
-'   ▶ [ADDED] documentation content, including version information and this patch notes.
-'   ▶ v0.1.22.308 (Pre Alpha)
-
-' Patch 010.22.308a03C
-'   ▶ Building the foundations of QuickType
-'   ▶ [REMOVED] dark mode introduced in previous patch. Although it's implimentation worked & looked well (Alhamdullillah), work on this is set aside for the time being, and the feature may return at a future build, Insha'Allah.
-'   ▶ v0.1.22.307 (Pre Alpha)
-
-' Patch 010.22.306a02B
-'   ▶ Building the foundations of QuickType
-'   ▶ [ADDED] experimental dark mode to the menu bar, menus, text field, and status bar. The title bar did not receive this change.
-'   ▶ v0.1.22.306 (Pre Alpha)
-
-' Patch N/A
-'   ▶ This is the working version of "NazmusLabs QuickType GO!"
-'   ▶ Building the foundations of QuickType
-'   ▶
-'   ▶ v0.1.22.305 (First Build)
+' Patch 012.22.308a05E
+'   ▶ This release continues building the foundations.
+'   ▶ [ADDED] the ability to enable/disable word wrap
+'   ▶ [ADDED] the ability to set editor font
+'   ▶ [UPDATED] default font property of the text editor is changed to "Cascadia Code SemiLight, 12pt, style=Italic"
+'   ▶ [UPDATED] documentation content with in-line comments throughout to explain what most of the code does, Alhamdullillah.
+'   ▶ [REMOVED] Patch notes for all previous versions. They are now included in a seperate file.
+'   ▶ v0.1.22.309 (Pre Alpha)
 
 Public Class QuickType
+    '🔄️ Startup rutines
     Private Sub QuickType_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        '⏳ Starting up...
+        '⏳ Loading user settings...
+        'EditorFontDialog = ?
+        TextEditor.Font = EditorFontDialog.Font
+        TextEditor.WordWrap = False
+        EditorStatusBar.Visible = True
 
     End Sub
 
-    '🔧 Status bar visibility toggle
-    Private Sub StatusBarToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StatusBarToolStripMenuItem.Click
-        '⏳ Setting user configuration...
-        If StatusBarToolStripMenuItem.Checked Then
-            StatusStrip.Hide()
-            StatusBarToolStripMenuItem.Checked = False
+    '🔧 Set status bar visibility toggle
+    Private Sub ShowStatusBarMenuToggle_Click(sender As Object, e As EventArgs) Handles ShowStatusBarMenuToggle.Click
+        '⏳ Loading settings...
+        If ShowStatusBarMenuToggle.Checked Then
+            '⏳ Applying user configuration...
+            EditorStatusBar.Hide()
+            ShowStatusBarMenuToggle.Checked = False
         Else
-            StatusStrip.Show()
-            StatusBarToolStripMenuItem.Checked = True
+            '⏳ Applying user configuration...
+            EditorStatusBar.Show()
+            ShowStatusBarMenuToggle.Checked = True
         End If
-
+        '⏳ Saving user configurations...
     End Sub
 
-    Private Sub ExitToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ExitToolStripMenuItem.Click
+    '🔧 Set Word Wrap toggle
+    Private Sub WordWrapMenuToggle_Click(sender As Object, e As EventArgs) Handles WordWrapMenuToggle.Click
+        '⏳ Setting user configuration...
+        If WordWrapMenuToggle.Checked Then
+            TextEditor.WordWrap = False
+            WordWrapMenuToggle.Checked = False
+        Else
+            TextEditor.WordWrap = True
+            WordWrapMenuToggle.Checked = True
+        End If
+    End Sub
+
+    '🔧 Set Font
+    Private Sub FontToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FontToolStripMenuItem.Click
+        '⏳ Opening Font dialogue...
+
+        'EditorFontDialog.ShowDialog() <- ⚠️ Obsolete code
+
+        If EditorFontDialog.ShowDialog = DialogResult.OK Then   '💡 Full string for accessing this property: Windows.Forms.DialogResult.OK
+
+            '⏳ Applying user configurations...
+            TextEditor.Font = EditorFontDialog.Font
+
+            '⏳ Saving user configurations...
+
+            '⚠️ Debug code (💡 Should remain disabled in production builds)
+            'MsgBox("Font selected: " + EditorFontDialog.Font.ToString + " " + TextEditor.Font.ToString)
+
+        End If
+    End Sub
+
+    '⚡ User Action
+    Private Sub ExitMenuItem_Click(sender As Object, e As EventArgs) Handles ExitMenuItem.Click
         '⏳ Exiting...
         Application.Exit()
     End Sub
