@@ -1,0 +1,13 @@
+C:\Users\nkhan\source\repos\NazmusLabs\QuickType\QuickType\bin\Debug\QuickType.exe.config
+C:\Users\nkhan\source\repos\NazmusLabs\QuickType\QuickType\bin\Debug\QuickType.exe
+C:\Users\nkhan\source\repos\NazmusLabs\QuickType\QuickType\bin\Debug\QuickType.pdb
+C:\Users\nkhan\source\repos\NazmusLabs\QuickType\QuickType\bin\Debug\QuickType.xml
+C:\Users\nkhan\source\repos\NazmusLabs\QuickType\QuickType\obj\Debug\QuickType.vbproj.AssemblyReference.cache
+C:\Users\nkhan\source\repos\NazmusLabs\QuickType\QuickType\obj\Debug\QuickType.vbproj.SuggestedBindingRedirects.cache
+C:\Users\nkhan\source\repos\NazmusLabs\QuickType\QuickType\obj\Debug\QuickType.Resources.resources
+C:\Users\nkhan\source\repos\NazmusLabs\QuickType\QuickType\obj\Debug\QuickType.vbproj.GenerateResource.cache
+C:\Users\nkhan\source\repos\NazmusLabs\QuickType\QuickType\obj\Debug\QuickType.vbproj.CoreCompileInputs.cache
+C:\Users\nkhan\source\repos\NazmusLabs\QuickType\QuickType\obj\Debug\QuickType.exe
+C:\Users\nkhan\source\repos\NazmusLabs\QuickType\QuickType\obj\Debug\QuickType.xml
+C:\Users\nkhan\source\repos\NazmusLabs\QuickType\QuickType\obj\Debug\QuickType.pdb
+C:\Users\nkhan\source\repos\NazmusLabs\QuickType\QuickType\obj\Debug\QuickType.QuickType.resources
